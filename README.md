@@ -1,6 +1,16 @@
 # About
 This small project is used to parse a date that can be defined in multiple formats.
 
+## Requirements
+
+- Lex: This tool is a standard component on most UNIX operating systems. The GNU flex tool provides the same functionality.
+
+- Yacc: This tool is standard on most UNIX operating systems. The GNU bison tool provides the same functionality.
+
+- C compiler: Any standard C compiler, including Gnu CC, will be fine.
+
+- Make tool: This tool is required to use the sample Makefile to simplify building.
+
 ## Supported datetimes
 
 ```
@@ -12,6 +22,7 @@ This small project is used to parse a date that can be defined in multiple forma
 ```
 
 ## BNF
+
 ```
 time   ::= <hour><ampm> | <hour>:<minute><ampm> | <hour>:<minute>
 ampm   ::= am | pm
@@ -24,5 +35,39 @@ digit  ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 Equivalent of yacc and lex in linux are bison and flex.
 
 Install with: sudo apt-get install bison flex
+
+### Rune the sample code:
+
+```
+% bison -d datetime.y
+% flex datetime.l
+% g++ datetime.tab.c lex.yy.c -lfl -o datetime
+% cat in.datetime
+```
+
+Given the dates files, the output should look like:
+```
+new hour: 4
+new pm: PM
+new hour: 7
+new separator: :
+new minutes: 38
+new pm: PM
+new hour: 23
+new separator: :
+new minutes: 42
+new hour: 3
+new separator: :
+new minutes: 16
+new hour: 3
+new separator: :
+new minutes: 16
+new am: AM
+end: END
+done with the dates file!
+```
+
+### Help
+http://aquamentus.com/flex_bison.html
 
 ## perl
