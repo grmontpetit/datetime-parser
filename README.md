@@ -36,13 +36,12 @@ Equivalent of yacc and lex in linux are bison and flex.
 
 Install with: sudo apt-get install bison flex
 
-### Rune the sample code:
+### Run the sample code:
 
 ```
-% bison -d datetime.y
-% flex datetime.l
-% g++ datetime.tab.c lex.yy.c -lfl -o datetime
-% cat in.datetime
+cd lexyacc
+make datetime
+./datetime.out
 ```
 
 Given the dates files, the output should look like:

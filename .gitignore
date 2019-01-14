@@ -1,2 +1,3 @@
 lexyacc/*.c
 lexyacc/*.h
+lexyacc/datetime.out
