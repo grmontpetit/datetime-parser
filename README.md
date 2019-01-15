@@ -7,7 +7,7 @@ This small project is used to parse a date that can be defined in multiple forma
 
 - Yacc: This tool is standard on most UNIX operating systems. The GNU bison tool provides the same functionality.
 
-- C compiler: Any standard C compiler, including Gnu CC, will be fine.
+- C compiler: Any standard C compiler, including Gnu CC (g++), will be fine.
 
 - Make tool: This tool is required to use the sample Makefile to simplify building.
 
@@ -34,7 +34,7 @@ digit  ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ## bison and flex
 Equivalent of yacc and lex in linux are bison and flex.
 
-Install with: sudo apt-get install bison flex
+Install with: `sudo apt-get install bison flex`
 
 ### Run the sample code:
 
