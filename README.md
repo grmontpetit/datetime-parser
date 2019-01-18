@@ -36,7 +36,7 @@ Equivalent of yacc and lex in linux are bison and flex.
 
 Install with: `sudo apt-get install bison flex`
 
-### Run the sample code:
+### Run the sample code
 
 ```
 cd lexyacc
@@ -70,3 +70,21 @@ done with the dates file!
 http://aquamentus.com/flex_bison.html
 
 ## perl
+Same as above but using perl and regex to parse dates.
+
+### Run the sample code
+
+```
+cd perl
+./parser-combinator.pl
+```
+
+Given the dates files, the output should look like:
+```
+4pm is 4 hour(s) in the pm
+7:38pm is: 7 hour(s) and 38 minutes(s) in the pm
+23:42 is: 23 hours and 42 minutes(s)
+3:16 is: 3 hours and 16 minutes(s)
+3:16am is: 3 hour(s) and 16 minutes(s) in the am
+File termination.
+```
